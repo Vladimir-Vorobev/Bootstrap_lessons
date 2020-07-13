@@ -1,12 +1,15 @@
 <template>
  <div id="app" style="height: 100% !important;">
+    <nav-bar></nav-bar>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import NavBar from './components/Navbar.vue'
 export default {
   name: 'App',
+  components: { NavBar },
 }
 </script>
 
@@ -31,7 +34,9 @@ html{
 }
 body {
     width:100% !important; 
-    height:100% !important; 
+    height:100% !important;
+    margin: 0px;
+    background-color: #eef5ff;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -39,13 +44,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  height: 100% !important;
+  height: 100vh;
+  overflow: hidden;
   padding: 0px;
   margin: 0px;
-  /*background-color: rgb(231, 231, 231);*/
   background-color: #eef5ff;
-}
-body {
-  margin: 0px;
 }
 </style>
